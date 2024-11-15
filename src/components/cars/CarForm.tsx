@@ -28,7 +28,7 @@ export function CarForm({ isEditing = false }: CarFormProps) {
         setTitle(car.title);
         setDescription(car.description);
         setTags(car.tags.join(', '));
-      }).catch(error => {
+      }).catch(() => {
         toast({
           title: "Error",
           description: "Failed to fetch car details. Please try again.",
